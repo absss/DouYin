@@ -13,7 +13,7 @@ typedef NS_ENUM(NSInteger, DYVideoTableVcType) {
 };
 
 @interface DYVideoTableController : DYBaseViewController
-
+- (instancetype)initWithType:(DYVideoTableVcType)type;
 @end
 
 

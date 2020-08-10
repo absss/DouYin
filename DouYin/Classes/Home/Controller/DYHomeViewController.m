@@ -35,11 +35,11 @@
     self.containerView.frame = CGRectMake(0, 0, DYViewControllerWidth,DYViewControllerHeight);
   
     
-    DYVideoTableController *v1 = [DYVideoTableController new];
+    DYVideoTableController *v1 = [[DYVideoTableController alloc]initWithType:DYHomeSubVCTypeFollow];
     v1.title = @"关注";
     v1.view.backgroundColor = UIColor.redColor;
     
-    DYVideoTableController *v2 = [DYVideoTableController new];
+    DYVideoTableController *v2 =  [[DYVideoTableController alloc]initWithType:DYHomeSubVCTypeRecommand];
     v2.title = @"推荐";
     v2.view.backgroundColor = UIColor.blueColor;
   
@@ -48,6 +48,7 @@
 
     self.containerView.contentSize = CGSizeMake(DYViewControllerWidth*self.childViewControllers.count, DYViewControllerHeight);
     int i = 0;
+    
     for (UIViewController *vc in self.childViewControllers) {
         vc.view.frame = CGRectMake(i*DYViewControllerWidth, 0, DYViewControllerWidth, CGRectGetHeight(self.containerView.frame));
         [self.containerView addSubview:vc.view];
@@ -72,7 +73,7 @@ UIViewGetter(navView, UIColor.clearColor);
 
 - (DYSegmentView *)segmentView {
     if (!_segmentView) {
-        _segmentView = [[DYSegmentView alloc]initWithFrame:CGRectMake(100, 44, DYViewControllerWidth-200, 44)];
+        _segmentView = [[DYSegmentView alloc]initWithFrame:CGRectMake(DYViewControllerWidth/2-80, 44, 160, 44)];
         _segmentView.segemtnDelegate = self;
         _segmentView.indicatorBarColor = DYColor.whiteColor1;
     }
@@ -85,7 +86,7 @@ UIViewGetter(navView, UIColor.clearColor);
 
 - (DYSegmentItemView *)segmentView:(DYSegmentView *)segmentView viewForItemAtIndex:(NSInteger)index {
     DYSegmentItemView *itemView = [DYSegmentItemView new];
-    itemView.button.titleLabel.font = [DYFont boldSystemFontOfSize:20];
+    itemView.button.titleLabel.font = [DYFont boldSystemFontOfSize:18];
     itemView.title = self.childViewControllers[index].title;
     return itemView;
 }

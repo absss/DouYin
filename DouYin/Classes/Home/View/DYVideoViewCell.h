@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DYVideoModel.h"
+#import "DYVideoView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DYVideoViewCell : UITableViewCell
-
+@property (nonatomic,strong)DYVideoModel *data;
+@property (nonatomic,strong,readonly) DYVideoView *videoView;
 @end
 
 NS_ASSUME_NONNULL_END
