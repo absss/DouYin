@@ -23,41 +23,61 @@
     return self;
 }
 
-- (void)setTitles:(NSArray *)titles {
-    _titles = titles;
-    [self setupSubViews];
-}
-- (void)setupSubViews {
-    int i = 0;
-    for (NSString *title in self.titles) {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self addSubview:btn];
-        if (_selecdedIdx == i) {
-            btn.selected = YES;
+- (void)reloadData {
+    [self removeAllSubViews];
+    NSInteger count = [self.delegate numberOfItemsWithTabbar:self];
+    for (int i = 0;i < count; i++) {
+        id item = [self.delegate tabbar:self itemForColumnAtIndex:i];
+        if ([item isKindOfClass:[NSString class]]) {
+            NSString *title = (NSString *)item;
+            UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            [self addSubview:btn];
+            if (_selecdedIdx == i) {
+                btn.selected = YES;
+            }
+            CGFloat width = CGRectGetWidth(self.frame)/count;
+            CGFloat height = CGRectGetHeight(self.frame);
+            btn.frame = CGRectMake(width*i, 0, width, height);
+            NSMutableAttributedString * normalStr = [[NSMutableAttributedString alloc]initWithString:title];
+            [normalStr addAttributes:@{NSForegroundColorAttributeName:DYColor.whiteColor1,NSFontAttributeName:[DYFont systemFontOfSize:16]} range:NSMakeRange(0, title.length)];
+            NSMutableAttributedString * selectedStr = [[NSMutableAttributedString alloc]initWithString:title];
+            [selectedStr addAttributes:@{NSForegroundColorAttributeName:DYColor.whiteColor0,NSFontAttributeName:[DYFont systemFontOfSize:18]} range:NSMakeRange(0, title.length)];
+            [btn setAttributedTitle:normalStr forState:UIControlStateNormal];
+            [btn setAttributedTitle:selectedStr forState:UIControlStateSelected];
+            btn.tag = 100+i;
+            [btn addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+        } else {
+            UIButton * btn = (UIButton *)item;
+            btn.userInteractionEnabled = YES;
+            [self addSubview:btn];
+            if (_selecdedIdx == i) {
+                btn.selected = YES;
+            }
+            CGFloat width = CGRectGetWidth(self.frame)/count;
+            CGFloat height = CGRectGetHeight(self.frame);
+            btn.frame = CGRectMake(width*i, 0, width, height);
+            btn.tag = 100+i;
+            [btn addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
+
         }
-        CGFloat width = CGRectGetWidth(self.frame)/_titles.count;
-        CGFloat height = CGRectGetHeight(self.frame);
-        btn.frame = CGRectMake(width*i, 0, width, height);
-        NSMutableAttributedString * normalStr = [[NSMutableAttributedString alloc]initWithString:title];
-        [normalStr addAttributes:@{NSForegroundColorAttributeName:DYColor.whiteColor1,NSFontAttributeName:[DYFont systemFontOfSize:16]} range:NSMakeRange(0, title.length)];
-        NSMutableAttributedString * selectedStr = [[NSMutableAttributedString alloc]initWithString:title];
-        [selectedStr addAttributes:@{NSForegroundColorAttributeName:DYColor.whiteColor0,NSFontAttributeName:[DYFont systemFontOfSize:18]} range:NSMakeRange(0, title.length)];
-        [btn setAttributedTitle:normalStr forState:UIControlStateNormal];
-        [btn setAttributedTitle:selectedStr forState:UIControlStateSelected];
-        btn.tag = 100+i;
-        [btn addTarget:self action:@selector(clickAction:) forControlEvents:UIControlEventTouchUpInside];
-        i++;
     }
     
 }
 
 - (void)clickAction:(UIButton *)sender {
-    UIButton *preSelectedBtn =  [self viewWithTag:self.selecdedIdx+100];
-    preSelectedBtn.selected = NO;
-    sender.selected = YES;
+    
+    BOOL shouldSelect = YES;
+    if ([self.delegate respondsToSelector:@selector(tabbar:shouldSelectItemAtIndex:)]) {
+        shouldSelect = [self.delegate tabbar:self shouldSelectItemAtIndex:sender.tag - 100];
+    }
+    if (1) {
+        UIButton *preSelectedBtn =  [self viewWithTag:self.selecdedIdx+100];
+        preSelectedBtn.selected = NO;
+        sender.selected = YES;
+    }
     self.selecdedIdx = (int)(sender.tag - 100);
-    if (self.selectedBlock) {
-        self.selectedBlock(sender.tag - 100);
+    if ([self.delegate respondsToSelector:@selector(tabbar:didSelectItemAtIndex:)]) {
+        [self.delegate tabbar:self didSelectItemAtIndex:sender.tag - 100];
     }
 }
 @end

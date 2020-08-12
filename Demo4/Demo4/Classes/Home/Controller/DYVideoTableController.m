@@ -36,8 +36,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
-    for (int i = 0; i < 5; i++) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"bbb" ofType:@"MP4"];
+    for (int i = 0; i < 10; i++) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"v%d",i+1] ofType:@"MP4"];
         NSURL *url = [NSURL fileURLWithPath:path];
         DYVideoModel *model = [DYVideoModel new];
         model.videoUrl = url;
@@ -55,7 +55,7 @@
          DYVideoViewCell *cell1 = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:currentPageIndex inSection:0]];
          DYVideoViewCell *cell2 = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:_currentPageIndex inSection:0]];
          [cell2.videoView setPlaying:NO animation:NO];
-         [cell2.videoView resetTime];
+         [cell2.videoView resetState];
          [cell1.videoView setPlaying:YES animation:NO];
      }
 

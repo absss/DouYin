@@ -58,7 +58,16 @@
 		9E4C7D5424E249740051EAD8 /* DYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7D2024E249740051EAD8 /* DYBaseNavigationController.m */; };
 		9E4C7D5524E249740051EAD8 /* DYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7D2324E249740051EAD8 /* DYBaseViewController.m */; };
 		9E4C7D5624E249740051EAD8 /* DYMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7D2624E249740051EAD8 /* DYMainTabBarController.m */; };
-		9E4C7D5A24E24A570051EAD8 /* bbb.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E4C7D5924E24A570051EAD8 /* bbb.MP4 */; };
+		9E4C7D5A24E24A570051EAD8 /* v1.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E4C7D5924E24A570051EAD8 /* v1.MP4 */; };
+		9E60D84424E3851200764C03 /* v4.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84124E3851200764C03 /* v4.MP4 */; };
+		9E60D84524E3851200764C03 /* v2.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84224E3851200764C03 /* v2.MP4 */; };
+		9E60D84624E3851200764C03 /* v3.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84324E3851200764C03 /* v3.MP4 */; };
+		9E60D84D24E386AF00764C03 /* v8.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84724E386AF00764C03 /* v8.MP4 */; };
+		9E60D84E24E386AF00764C03 /* v6.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84824E386AF00764C03 /* v6.MP4 */; };
+		9E60D84F24E386AF00764C03 /* v5.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84924E386AF00764C03 /* v5.MP4 */; };
+		9E60D85024E386AF00764C03 /* v9.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84A24E386AF00764C03 /* v9.MP4 */; };
+		9E60D85124E386AF00764C03 /* v10.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84B24E386AF00764C03 /* v10.MP4 */; };
+		9E60D85224E386AF00764C03 /* v7.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84C24E386AF00764C03 /* v7.MP4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,7 +180,16 @@
 		9E4C7D2524E249740051EAD8 /* DYMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYMainTabBarController.h; sourceTree = "<group>"; };
 		9E4C7D2624E249740051EAD8 /* DYMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYMainTabBarController.m; sourceTree = "<group>"; };
 		9E4C7D2724E249740051EAD8 /* DYPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYPrefixHeader.pch; sourceTree = "<group>"; };
-		9E4C7D5924E24A570051EAD8 /* bbb.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bbb.MP4; sourceTree = "<group>"; };
+		9E4C7D5924E24A570051EAD8 /* v1.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v1.MP4; sourceTree = "<group>"; };
+		9E60D84124E3851200764C03 /* v4.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v4.MP4; sourceTree = "<group>"; };
+		9E60D84224E3851200764C03 /* v2.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v2.MP4; sourceTree = "<group>"; };
+		9E60D84324E3851200764C03 /* v3.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v3.MP4; sourceTree = "<group>"; };
+		9E60D84724E386AF00764C03 /* v8.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v8.MP4; sourceTree = "<group>"; };
+		9E60D84824E386AF00764C03 /* v6.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v6.MP4; sourceTree = "<group>"; };
+		9E60D84924E386AF00764C03 /* v5.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v5.MP4; sourceTree = "<group>"; };
+		9E60D84A24E386AF00764C03 /* v9.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v9.MP4; sourceTree = "<group>"; };
+		9E60D84B24E386AF00764C03 /* v10.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v10.MP4; sourceTree = "<group>"; };
+		9E60D84C24E386AF00764C03 /* v7.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v7.MP4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,18 +222,25 @@
 		9E4C7C9424E248D00051EAD8 /* Demo4 */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C7D5924E24A570051EAD8 /* bbb.MP4 */,
-				9E4C7CB124E249730051EAD8 /* Classes */,
-				9E4C7D2424E249740051EAD8 /* DYCommonMacro.h */,
-				9E4C7D2524E249740051EAD8 /* DYMainTabBarController.h */,
-				9E4C7D2624E249740051EAD8 /* DYMainTabBarController.m */,
-				9E4C7D2724E249740051EAD8 /* DYPrefixHeader.pch */,
 				9E4C7C9524E248D00051EAD8 /* AppDelegate.h */,
 				9E4C7C9624E248D00051EAD8 /* AppDelegate.m */,
 				9E4C7CA124E248D50051EAD8 /* Assets.xcassets */,
-				9E4C7CA324E248D50051EAD8 /* LaunchScreen.storyboard */,
+				9E4C7CB124E249730051EAD8 /* Classes */,
+				9E4C7D2424E249740051EAD8 /* DYCommonMacro.h */,
+				9E4C7D2724E249740051EAD8 /* DYPrefixHeader.pch */,
 				9E4C7CA624E248D50051EAD8 /* Info.plist */,
+				9E4C7CA324E248D50051EAD8 /* LaunchScreen.storyboard */,
 				9E4C7CA724E248D50051EAD8 /* main.m */,
+				9E4C7D5924E24A570051EAD8 /* v1.MP4 */,
+				9E60D84224E3851200764C03 /* v2.MP4 */,
+				9E60D84324E3851200764C03 /* v3.MP4 */,
+				9E60D84124E3851200764C03 /* v4.MP4 */,
+				9E60D84924E386AF00764C03 /* v5.MP4 */,
+				9E60D84824E386AF00764C03 /* v6.MP4 */,
+				9E60D84C24E386AF00764C03 /* v7.MP4 */,
+				9E60D84724E386AF00764C03 /* v8.MP4 */,
+				9E60D84A24E386AF00764C03 /* v9.MP4 */,
+				9E60D84B24E386AF00764C03 /* v10.MP4 */,
 			);
 			path = Demo4;
 			sourceTree = "<group>";
@@ -248,8 +273,8 @@
 			isa = PBXGroup;
 			children = (
 				9E4C7CB424E249730051EAD8 /* DYHomeViewController.h */,
-				9E4C7CB524E249730051EAD8 /* DYVideoTableController.h */,
 				9E4C7CB624E249730051EAD8 /* DYHomeViewController.m */,
+				9E4C7CB524E249730051EAD8 /* DYVideoTableController.h */,
 				9E4C7CB724E249730051EAD8 /* DYVideoTableController.m */,
 			);
 			path = Controller;
@@ -268,8 +293,8 @@
 			isa = PBXGroup;
 			children = (
 				9E4C7CBC24E249730051EAD8 /* DYVideoView.h */,
-				9E4C7CBD24E249730051EAD8 /* DYVideoViewCell.h */,
 				9E4C7CBE24E249730051EAD8 /* DYVideoView.m */,
+				9E4C7CBD24E249730051EAD8 /* DYVideoViewCell.h */,
 				9E4C7CBF24E249730051EAD8 /* DYVideoViewCell.m */,
 			);
 			path = View;
@@ -278,12 +303,12 @@
 		9E4C7CC024E249730051EAD8 /* Thrid */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C7CC124E249730051EAD8 /* YYCache */,
 				9E4C7CCA24E249730051EAD8 /* CSFSegment */,
+				9E4C7CF224E249730051EAD8 /* DYPickView */,
 				9E4C7CCF24E249730051EAD8 /* DYSegmentView */,
 				9E4C7CD224E249730051EAD8 /* Masonry */,
+				9E4C7CC124E249730051EAD8 /* YYCache */,
 				9E4C7CEC24E249730051EAD8 /* YYModel */,
-				9E4C7CF224E249730051EAD8 /* DYPickView */,
 			);
 			path = Thrid;
 			sourceTree = "<group>";
@@ -306,10 +331,10 @@
 		9E4C7CCA24E249730051EAD8 /* CSFSegment */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C7CCB24E249730051EAD8 /* CSFSegmentController.m */,
-				9E4C7CCC24E249730051EAD8 /* CSFSegmentView.m */,
-				9E4C7CCD24E249730051EAD8 /* CSFSegmentView.h */,
 				9E4C7CCE24E249730051EAD8 /* CSFSegmentController.h */,
+				9E4C7CCB24E249730051EAD8 /* CSFSegmentController.m */,
+				9E4C7CCD24E249730051EAD8 /* CSFSegmentView.h */,
+				9E4C7CCC24E249730051EAD8 /* CSFSegmentView.m */,
 			);
 			path = CSFSegment;
 			sourceTree = "<group>";
@@ -389,22 +414,22 @@
 		9E4C7CFF24E249740051EAD8 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C7D0024E249740051EAD8 /* UIViewController+DYToast.m */,
-				9E4C7D0124E249740051EAD8 /* UIButton+CountDown.m */,
-				9E4C7D0224E249740051EAD8 /* UIColor+Util.h */,
-				9E4C7D0324E249740051EAD8 /* UIView+Util.m */,
-				9E4C7D0424E249740051EAD8 /* UITextView+Placeholder.m */,
-				9E4C7D0524E249740051EAD8 /* UIView+Controller.m */,
-				9E4C7D0624E249740051EAD8 /* NSString+Util.m */,
-				9E4C7D0724E249740051EAD8 /* UIButton+Util.h */,
-				9E4C7D0824E249740051EAD8 /* UIViewController+DYToast.h */,
-				9E4C7D0924E249740051EAD8 /* UITextView+Placeholder.h */,
-				9E4C7D0A24E249740051EAD8 /* UIView+Util.h */,
-				9E4C7D0B24E249740051EAD8 /* UIColor+Util.m */,
-				9E4C7D0C24E249740051EAD8 /* UIButton+CountDown.h */,
 				9E4C7D0D24E249740051EAD8 /* NSString+Util.h */,
-				9E4C7D0E24E249740051EAD8 /* UIView+Controller.h */,
+				9E4C7D0624E249740051EAD8 /* NSString+Util.m */,
+				9E4C7D0C24E249740051EAD8 /* UIButton+CountDown.h */,
+				9E4C7D0124E249740051EAD8 /* UIButton+CountDown.m */,
+				9E4C7D0724E249740051EAD8 /* UIButton+Util.h */,
 				9E4C7D0F24E249740051EAD8 /* UIButton+Util.m */,
+				9E4C7D0224E249740051EAD8 /* UIColor+Util.h */,
+				9E4C7D0B24E249740051EAD8 /* UIColor+Util.m */,
+				9E4C7D0924E249740051EAD8 /* UITextView+Placeholder.h */,
+				9E4C7D0424E249740051EAD8 /* UITextView+Placeholder.m */,
+				9E4C7D0E24E249740051EAD8 /* UIView+Controller.h */,
+				9E4C7D0524E249740051EAD8 /* UIView+Controller.m */,
+				9E4C7D0A24E249740051EAD8 /* UIView+Util.h */,
+				9E4C7D0324E249740051EAD8 /* UIView+Util.m */,
+				9E4C7D0824E249740051EAD8 /* UIViewController+DYToast.h */,
+				9E4C7D0024E249740051EAD8 /* UIViewController+DYToast.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -421,8 +446,8 @@
 		9E4C7D1324E249740051EAD8 /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C7D1424E249740051EAD8 /* DYMeViewController.m */,
 				9E4C7D1524E249740051EAD8 /* DYMeViewController.h */,
+				9E4C7D1424E249740051EAD8 /* DYMeViewController.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -430,8 +455,8 @@
 		9E4C7D1624E249740051EAD8 /* OneCity */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C7D1724E249740051EAD8 /* DYOneCityViewController.m */,
 				9E4C7D1824E249740051EAD8 /* DYOneCityViewController.h */,
+				9E4C7D1724E249740051EAD8 /* DYOneCityViewController.m */,
 			);
 			path = OneCity;
 			sourceTree = "<group>";
@@ -439,16 +464,18 @@
 		9E4C7D1924E249740051EAD8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C7D1A24E249740051EAD8 /* DYFont.h */,
-				9E4C7D1B24E249740051EAD8 /* DYColor.m */,
 				9E4C7D1C24E249740051EAD8 /* DYBaseNavigationController.h */,
-				9E4C7D1D24E249740051EAD8 /* DYBaseViewController.h */,
-				9E4C7D1E24E249740051EAD8 /* DYTabBar.m */,
-				9E4C7D1F24E249740051EAD8 /* DYFont.m */,
 				9E4C7D2024E249740051EAD8 /* DYBaseNavigationController.m */,
-				9E4C7D2124E249740051EAD8 /* DYColor.h */,
-				9E4C7D2224E249740051EAD8 /* DYTabBar.h */,
+				9E4C7D1D24E249740051EAD8 /* DYBaseViewController.h */,
 				9E4C7D2324E249740051EAD8 /* DYBaseViewController.m */,
+				9E4C7D2124E249740051EAD8 /* DYColor.h */,
+				9E4C7D1B24E249740051EAD8 /* DYColor.m */,
+				9E4C7D1A24E249740051EAD8 /* DYFont.h */,
+				9E4C7D1F24E249740051EAD8 /* DYFont.m */,
+				9E4C7D2224E249740051EAD8 /* DYTabBar.h */,
+				9E4C7D1E24E249740051EAD8 /* DYTabBar.m */,
+				9E4C7D2524E249740051EAD8 /* DYMainTabBarController.h */,
+				9E4C7D2624E249740051EAD8 /* DYMainTabBarController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -510,10 +537,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E4C7D5A24E24A570051EAD8 /* bbb.MP4 in Resources */,
+				9E60D85224E386AF00764C03 /* v7.MP4 in Resources */,
+				9E60D85024E386AF00764C03 /* v9.MP4 in Resources */,
+				9E60D84F24E386AF00764C03 /* v5.MP4 in Resources */,
+				9E60D84424E3851200764C03 /* v4.MP4 in Resources */,
+				9E4C7D5A24E24A570051EAD8 /* v1.MP4 in Resources */,
 				9E4C7D4324E249740051EAD8 /* address.plist in Resources */,
+				9E60D84D24E386AF00764C03 /* v8.MP4 in Resources */,
+				9E60D84E24E386AF00764C03 /* v6.MP4 in Resources */,
 				9E4C7CA524E248D50051EAD8 /* LaunchScreen.storyboard in Resources */,
+				9E60D84624E3851200764C03 /* v3.MP4 in Resources */,
+				9E60D85124E386AF00764C03 /* v10.MP4 in Resources */,
 				9E4C7CA224E248D50051EAD8 /* Assets.xcassets in Resources */,
+				9E60D84524E3851200764C03 /* v2.MP4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,7 +742,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ZP2SAR4PS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/hehaichi/Other/Demo4/Demo4/DYPrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Demo4/DYPrefixHeader.pch";
 				INFOPLIST_FILE = Demo4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -726,7 +762,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5ZP2SAR4PS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/hehaichi/Other/Demo4/Demo4/DYPrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Demo4/DYPrefixHeader.pch";
 				INFOPLIST_FILE = Demo4/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
