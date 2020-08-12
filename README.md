@@ -57,16 +57,16 @@
 播放使用`AVPlayer` 和`AVPlayerLayer `
 
 ```objc
-    // 初始化
-		self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
-  	self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    [self.layer addSublayer:self.playerLayer];
+// 初始化
+self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
+self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+[self.layer addSublayer:self.playerLayer];
 ```
 
 ```objc
- 	 // 切换视频
- 	 AVPlayerItem *item = [AVPlayerItem playerItemWithURL:data.videoUrl];
-   [self.player replaceCurrentItemWithPlayerItem:item];
+// 切换视频
+AVPlayerItem *item = [AVPlayerItem playerItemWithURL:data.videoUrl];
+[self.player replaceCurrentItemWithPlayerItem:item];
 ```
 
 
@@ -125,4 +125,5 @@
 ```
 
 当前实现效果图如下：
+
 
