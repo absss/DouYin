@@ -12,7 +12,6 @@
 @protocol DYTabBarDelegate <NSObject>
 - (BOOL)tabbar:(DYTabBar *)tabbar shouldSelectItemAtIndex:(NSInteger)index;
 - (void)tabbar:(DYTabBar *)tabbar didSelectItemAtIndex:(NSInteger)index;
-
 @required
 // NSString or UIButton 子类
 - (id)tabbar:(DYTabBar *)tabbar itemForColumnAtIndex:(NSInteger)index;
@@ -20,8 +19,6 @@
 @end
 
 @interface DYTabBar : UIView
-@property (nonatomic, copy)void(^selectedBlock)(NSInteger idx);
 @property (nonatomic, weak)id<DYTabBarDelegate> delegate;
-
 - (void)reloadData;
 @end

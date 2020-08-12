@@ -20,8 +20,6 @@
 		9E4C7D2E24E249740051EAD8 /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7CC424E249730051EAD8 /* YYCache.m */; };
 		9E4C7D2F24E249740051EAD8 /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7CC824E249730051EAD8 /* YYKVStorage.m */; };
 		9E4C7D3024E249740051EAD8 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7CC924E249730051EAD8 /* YYMemoryCache.m */; };
-		9E4C7D3124E249740051EAD8 /* CSFSegmentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7CCB24E249730051EAD8 /* CSFSegmentController.m */; };
-		9E4C7D3224E249740051EAD8 /* CSFSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7CCC24E249730051EAD8 /* CSFSegmentView.m */; };
 		9E4C7D3324E249740051EAD8 /* DYSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7CD124E249730051EAD8 /* DYSegmentView.m */; };
 		9E4C7D3424E249740051EAD8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7CD424E249730051EAD8 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		9E4C7D3524E249740051EAD8 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7CDD24E249730051EAD8 /* ViewController+MASAdditions.m */; };
@@ -96,10 +94,6 @@
 		9E4C7CC724E249730051EAD8 /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
 		9E4C7CC824E249730051EAD8 /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
 		9E4C7CC924E249730051EAD8 /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
-		9E4C7CCB24E249730051EAD8 /* CSFSegmentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSFSegmentController.m; sourceTree = "<group>"; };
-		9E4C7CCC24E249730051EAD8 /* CSFSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSFSegmentView.m; sourceTree = "<group>"; };
-		9E4C7CCD24E249730051EAD8 /* CSFSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSFSegmentView.h; sourceTree = "<group>"; };
-		9E4C7CCE24E249730051EAD8 /* CSFSegmentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSFSegmentController.h; sourceTree = "<group>"; };
 		9E4C7CD024E249730051EAD8 /* DYSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYSegmentView.h; sourceTree = "<group>"; };
 		9E4C7CD124E249730051EAD8 /* DYSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYSegmentView.m; sourceTree = "<group>"; };
 		9E4C7CD324E249730051EAD8 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
@@ -303,7 +297,6 @@
 		9E4C7CC024E249730051EAD8 /* Thrid */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C7CCA24E249730051EAD8 /* CSFSegment */,
 				9E4C7CF224E249730051EAD8 /* DYPickView */,
 				9E4C7CCF24E249730051EAD8 /* DYSegmentView */,
 				9E4C7CD224E249730051EAD8 /* Masonry */,
@@ -326,17 +319,6 @@
 				9E4C7CC924E249730051EAD8 /* YYMemoryCache.m */,
 			);
 			path = YYCache;
-			sourceTree = "<group>";
-		};
-		9E4C7CCA24E249730051EAD8 /* CSFSegment */ = {
-			isa = PBXGroup;
-			children = (
-				9E4C7CCE24E249730051EAD8 /* CSFSegmentController.h */,
-				9E4C7CCB24E249730051EAD8 /* CSFSegmentController.m */,
-				9E4C7CCD24E249730051EAD8 /* CSFSegmentView.h */,
-				9E4C7CCC24E249730051EAD8 /* CSFSegmentView.m */,
-			);
-			path = CSFSegment;
 			sourceTree = "<group>";
 		};
 		9E4C7CCF24E249730051EAD8 /* DYSegmentView */ = {
@@ -577,7 +559,6 @@
 				9E4C7D4A24E249740051EAD8 /* UIView+Controller.m in Sources */,
 				9E4C7D3C24E249740051EAD8 /* MASViewConstraint.m in Sources */,
 				9E4C7D5324E249740051EAD8 /* DYFont.m in Sources */,
-				9E4C7D3124E249740051EAD8 /* CSFSegmentController.m in Sources */,
 				9E4C7D3324E249740051EAD8 /* DYSegmentView.m in Sources */,
 				9E4C7D3E24E249740051EAD8 /* NSObject+YYModel.m in Sources */,
 				9E4C7D4C24E249740051EAD8 /* UIColor+Util.m in Sources */,
@@ -605,7 +586,6 @@
 				9E4C7D5224E249740051EAD8 /* DYTabBar.m in Sources */,
 				9E4C7D2924E249740051EAD8 /* DYVideoTableController.m in Sources */,
 				9E4C7D4724E249740051EAD8 /* UIButton+CountDown.m in Sources */,
-				9E4C7D3224E249740051EAD8 /* CSFSegmentView.m in Sources */,
 				9E4C7D3A24E249740051EAD8 /* View+MASAdditions.m in Sources */,
 				9E4C7D4424E249740051EAD8 /* DYAddressModel.m in Sources */,
 			);
