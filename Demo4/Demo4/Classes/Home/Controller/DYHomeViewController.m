@@ -37,6 +37,7 @@
     
     DYVideoTableController *v1 = [[DYVideoTableController alloc]initWithType:DYHomeSubVCTypeFollow];
     v1.title = @"关注";
+    v1.selected = YES;
     v1.view.backgroundColor = DYColor.blackColor0;
     
     DYVideoTableController *v2 =  [[DYVideoTableController alloc]initWithType:DYHomeSubVCTypeRecommand];
@@ -92,6 +93,16 @@ UIViewGetter(navView, UIColor.clearColor);
 }
 
 - (void)segmentView:(DYSegmentView *)segmentView didSelectItemAtIndex:(NSInteger)index {
+    int i = 0;
+    for (DYVideoTableController *vc in self.childViewControllers) {
+        if (i == index) {
+            vc.selected = YES;
+        } else {
+            vc.selected = NO;
+        }
+        i++;
+    }
+    
     [self.containerView setContentOffset:CGPointMake(index*CGRectGetWidth(self.view.frame), 0) animated:YES];
 }
 

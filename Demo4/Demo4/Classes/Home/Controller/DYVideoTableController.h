@@ -14,6 +14,10 @@ typedef NS_ENUM(NSInteger, DYVideoTableVcType) {
 
 @interface DYVideoTableController : DYBaseViewController
 - (instancetype)initWithType:(DYVideoTableVcType)type;
+@property (nonatomic, assign, getter=isSelected)BOOL selected;
+
+- (void)pause:(NSInteger)index animation:(BOOL)animation;
+- (void)play:(NSInteger)index animation:(BOOL)animation;
 @end
 
 

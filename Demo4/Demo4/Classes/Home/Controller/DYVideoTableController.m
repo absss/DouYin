@@ -16,7 +16,7 @@
 }
 @property(nonatomic, strong) UITableView *tableView;
 @property(nonatomic, strong) NSMutableArray *dataArray;
-@property(nonatomic, assign) int currentPageIndex;
+@property(nonatomic, assign) NSInteger currentPageIndex;
 @end
 
 @implementation DYVideoTableController
@@ -45,21 +45,41 @@
         [self.dataArray addObject:model];
     }
     [self.tableView reloadData];
-    self.currentPageIndex = 0;
+    [self setCurrentPageIndex:0];
+    
+}
+
+- (void)setSelected:(BOOL)selected {
+    _selected = selected;
+    DYVideoViewCell *currentcell = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:_currentPageIndex inSection:0]];
+    if (_selected) {
+        [self setCurrentPageIndex:_currentPageIndex];
+    } else {
+        [currentcell.videoView setPlaying:NO animation:NO];
+        [currentcell.videoView resetState];
+    }
+    
 }
 
 #pragma mark - setter
-- (void)setCurrentPageIndex:(int)currentPageIndex {
+- (void)setCurrentPageIndex:(NSInteger)currentPageIndex {
     
-     if (currentPageIndex != _currentPageIndex) {
-         DYVideoViewCell *cell1 = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:currentPageIndex inSection:0]];
-         DYVideoViewCell *cell2 = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:_currentPageIndex inSection:0]];
-         [cell2.videoView setPlaying:NO animation:NO];
-         [cell2.videoView resetState];
-         [cell1.videoView setPlaying:YES animation:NO];
-     }
-
+    NSInteger preIndex = _currentPageIndex;
     _currentPageIndex = currentPageIndex;
+    if (! _selected) {
+        return;
+    }
+    DYVideoViewCell *currentcell = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:currentPageIndex inSection:0]];
+    DYVideoViewCell *preCell = [_tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:preIndex inSection:0]];
+    if (currentPageIndex != preIndex) {
+        [preCell.videoView setPlaying:NO animation:NO];
+        [preCell.videoView resetState];
+        [currentcell.videoView setPlaying:YES animation:NO];
+    } else {
+        if (!currentcell.videoView.isPlaying) {
+            [currentcell.videoView setPlaying:YES animation:NO];
+        }
+    }
 }
 
 #pragma mark - getter

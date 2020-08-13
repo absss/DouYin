@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E1BF2D024E3EB3D0063C0B5 /* DYVideoRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1BF2CE24E3EB3D0063C0B5 /* DYVideoRecordView.m */; };
+		9E1BF2D424E3F1F90063C0B5 /* DYVideoRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1BF2D324E3F1F90063C0B5 /* DYVideoRecordViewController.m */; };
 		9E4C7C9724E248D00051EAD8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C7C9624E248D00051EAD8 /* AppDelegate.m */; };
 		9E4C7CA224E248D50051EAD8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4C7CA124E248D50051EAD8 /* Assets.xcassets */; };
 		9E4C7CA524E248D50051EAD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4C7CA324E248D50051EAD8 /* LaunchScreen.storyboard */; };
@@ -69,6 +71,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E1BF2CE24E3EB3D0063C0B5 /* DYVideoRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYVideoRecordView.m; sourceTree = "<group>"; };
+		9E1BF2CF24E3EB3D0063C0B5 /* DYVideoRecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYVideoRecordView.h; sourceTree = "<group>"; };
+		9E1BF2D224E3F1F90063C0B5 /* DYVideoRecordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYVideoRecordViewController.h; sourceTree = "<group>"; };
+		9E1BF2D324E3F1F90063C0B5 /* DYVideoRecordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYVideoRecordViewController.m; sourceTree = "<group>"; };
 		9E4C7C9224E248D00051EAD8 /* Demo4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4C7C9524E248D00051EAD8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E4C7C9624E248D00051EAD8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -197,6 +203,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E1BF2C224E3EA350063C0B5 /* VideoPlay */ = {
+			isa = PBXGroup;
+			children = (
+				9E1BF2CD24E3EAF20063C0B5 /* View */,
+				9E1BF2CC24E3EAE40063C0B5 /* Model */,
+			);
+			path = VideoPlay;
+			sourceTree = "<group>";
+		};
+		9E1BF2C424E3EA9B0063C0B5 /* VideoRecord */ = {
+			isa = PBXGroup;
+			children = (
+				9E1BF2D124E3F1C50063C0B5 /* Controller */,
+				9E1BF2CB24E3EACD0063C0B5 /* View */,
+				9E1BF2C824E3EAB50063C0B5 /* Model */,
+			);
+			path = VideoRecord;
+			sourceTree = "<group>";
+		};
+		9E1BF2C824E3EAB50063C0B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E1BF2CB24E3EACD0063C0B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E1BF2CF24E3EB3D0063C0B5 /* DYVideoRecordView.h */,
+				9E1BF2CE24E3EB3D0063C0B5 /* DYVideoRecordView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E1BF2CC24E3EAE40063C0B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E4C7CB924E249730051EAD8 /* DYVideoModel.h */,
+				9E4C7CBA24E249730051EAD8 /* DYVideoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E1BF2CD24E3EAF20063C0B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E4C7CBC24E249730051EAD8 /* DYVideoView.h */,
+				9E4C7CBE24E249730051EAD8 /* DYVideoView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E1BF2D124E3F1C50063C0B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E1BF2D224E3F1F90063C0B5 /* DYVideoRecordViewController.h */,
+				9E1BF2D324E3F1F90063C0B5 /* DYVideoRecordViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		9E4C7C8924E248D00051EAD8 = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +310,8 @@
 		9E4C7CB124E249730051EAD8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9E1BF2C424E3EA9B0063C0B5 /* VideoRecord */,
+				9E1BF2C224E3EA350063C0B5 /* VideoPlay */,
 				9E4C7CB224E249730051EAD8 /* Home */,
 				9E4C7CC024E249730051EAD8 /* Thrid */,
 				9E4C7CFF24E249740051EAD8 /* Category */,
@@ -277,8 +347,6 @@
 		9E4C7CB824E249730051EAD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C7CB924E249730051EAD8 /* DYVideoModel.h */,
-				9E4C7CBA24E249730051EAD8 /* DYVideoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,8 +354,6 @@
 		9E4C7CBB24E249730051EAD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C7CBC24E249730051EAD8 /* DYVideoView.h */,
-				9E4C7CBE24E249730051EAD8 /* DYVideoView.m */,
 				9E4C7CBD24E249730051EAD8 /* DYVideoViewCell.h */,
 				9E4C7CBF24E249730051EAD8 /* DYVideoViewCell.m */,
 			);
@@ -552,6 +618,7 @@
 				9E4C7D2C24E249740051EAD8 /* DYVideoViewCell.m in Sources */,
 				9E4C7D4624E249740051EAD8 /* UIViewController+DYToast.m in Sources */,
 				9E4C7D3D24E249740051EAD8 /* MASViewAttribute.m in Sources */,
+				9E1BF2D424E3F1F90063C0B5 /* DYVideoRecordViewController.m in Sources */,
 				9E4C7D3824E249740051EAD8 /* MASLayoutConstraint.m in Sources */,
 				9E4C7D4924E249740051EAD8 /* UITextView+Placeholder.m in Sources */,
 				9E4C7D3724E249740051EAD8 /* MASConstraintMaker.m in Sources */,
@@ -571,6 +638,7 @@
 				9E4C7D4124E249740051EAD8 /* DYBaseView.m in Sources */,
 				9E4C7D3424E249740051EAD8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				9E4C7D4224E249740051EAD8 /* DYAddressPickerView.m in Sources */,
+				9E1BF2D024E3EB3D0063C0B5 /* DYVideoRecordView.m in Sources */,
 				9E4C7D3924E249740051EAD8 /* NSArray+MASAdditions.m in Sources */,
 				9E4C7D3624E249740051EAD8 /* MASCompositeConstraint.m in Sources */,
 				9E4C7D2E24E249740051EAD8 /* YYCache.m in Sources */,

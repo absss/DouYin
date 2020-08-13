@@ -12,7 +12,7 @@
 #import "DYMsgViewController.h"
 #import "DYMeViewController.h"
 #import "DYBaseNavigationController.h"
-
+#import "DYVideoRecordViewController.h"
 #import "DYTabBar.h"
 #import "UIColor+Util.h"
 
@@ -50,6 +50,14 @@
     [self.tabBar addSubview:tabbar];
     
     
+}
+- (BOOL)tabbar:(DYTabBar *)tabbar shouldSelectItemAtIndex:(NSInteger)index {
+    if (index == 2) {
+        DYVideoRecordViewController *vc = [DYVideoRecordViewController new];
+        [self presentViewController:vc animated:YES completion:nil];
+        return NO;
+    }
+    return YES;
 }
 
 - (void)tabbar:(DYTabBar *)tabbar didSelectItemAtIndex:(NSInteger)index {

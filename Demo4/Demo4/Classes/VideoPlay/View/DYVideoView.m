@@ -34,6 +34,10 @@
     self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     [self.layer addSublayer:self.playerLayer];
     [self addSubview:self.playIconView];
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord
+              withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker
+                      error:nil];
    
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickAction)];
     singleTap.numberOfTapsRequired = 1;
@@ -131,8 +135,8 @@
             _playing = playing;
             [self.player play];
             if (animation) {
-                NSTimeInterval duration = 0.5;
-                      [UIView animateWithDuration:duration / 2.0 animations:^{
+                NSTimeInterval duration = 0.2;
+                [UIView animateWithDuration:duration animations:^{
                           self.playIconView.alpha = 0;
                       } completion:^(BOOL finished) {
                           if (finished && [self.delegate respondsToSelector:@selector(videoView:didStartPlayVideo:)]) {
@@ -157,9 +161,8 @@
             [self.player pause];
             if (animation) {
                  _playIconView.transform = CGAffineTransformMakeScale(2.5, 2.5);
-                NSTimeInterval duration = 0.5;
                 CGFloat damping = 1.0;
-                [UIView animateWithDuration:duration delay:0.0 usingSpringWithDamping:damping initialSpringVelocity:1.0 / damping options:0 animations:^{
+                [UIView animateWithDuration:0.2 delay:0.0 usingSpringWithDamping:damping initialSpringVelocity:1.0 / damping options:0 animations:^{
                     self.playIconView.transform = CGAffineTransformIdentity;
                     self.playIconView.alpha = kPauseIconAlpha;
                 } completion:^(BOOL finished) {
