@@ -129,7 +129,6 @@ UIViewGetter(indicatorBar, UIColor.redColor);
     
 }
 - (void)moveToIndex:(NSInteger)index {
-    self.isMovingItem = YES;
     BOOL should = YES;
     if ([self.segemtnDelegate  respondsToSelector:@selector(segmentView:shouldSelectItemAtIndex:)]) {
         should =  [self.segemtnDelegate segmentView:self shouldSelectItemAtIndex:index];
@@ -151,9 +150,7 @@ UIViewGetter(indicatorBar, UIColor.redColor);
       } completion:^(BOOL finished) {
          
       }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.isMovingItem = NO;
-    });
+
     [self scrollSegementView];
     
     
@@ -161,9 +158,7 @@ UIViewGetter(indicatorBar, UIColor.redColor);
 
 
 - (void)followMove:(CGFloat)offsetX pageWidth:(CGFloat)pageWidth {
-    if (_isMovingItem) {
-        return;;
-    }
+
     NSInteger currentIndex = self.selectedIndex;
     
     // 当当前的偏移量大于被选中index的偏移量的时候，就是在右侧
