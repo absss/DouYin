@@ -68,6 +68,9 @@
 		9E60D85024E386AF00764C03 /* v9.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84A24E386AF00764C03 /* v9.MP4 */; };
 		9E60D85124E386AF00764C03 /* v10.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84B24E386AF00764C03 /* v10.MP4 */; };
 		9E60D85224E386AF00764C03 /* v7.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 9E60D84C24E386AF00764C03 /* v7.MP4 */; };
+		9E74ABC124EA560800F015A4 /* DYVideoThumbnailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74ABC024EA560800F015A4 /* DYVideoThumbnailCell.m */; };
+		9E74ABC524EA564800F015A4 /* DYVideoThumbnailLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74ABC424EA564800F015A4 /* DYVideoThumbnailLayout.m */; };
+		9E74ABC824EA6A7500F015A4 /* DYVideoThumbnailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E74ABC724EA6A7500F015A4 /* DYVideoThumbnailModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -190,6 +193,12 @@
 		9E60D84A24E386AF00764C03 /* v9.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v9.MP4; sourceTree = "<group>"; };
 		9E60D84B24E386AF00764C03 /* v10.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v10.MP4; sourceTree = "<group>"; };
 		9E60D84C24E386AF00764C03 /* v7.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = v7.MP4; sourceTree = "<group>"; };
+		9E74ABBF24EA560800F015A4 /* DYVideoThumbnailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYVideoThumbnailCell.h; sourceTree = "<group>"; };
+		9E74ABC024EA560800F015A4 /* DYVideoThumbnailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYVideoThumbnailCell.m; sourceTree = "<group>"; };
+		9E74ABC324EA564800F015A4 /* DYVideoThumbnailLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYVideoThumbnailLayout.h; sourceTree = "<group>"; };
+		9E74ABC424EA564800F015A4 /* DYVideoThumbnailLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYVideoThumbnailLayout.m; sourceTree = "<group>"; };
+		9E74ABC624EA6A7500F015A4 /* DYVideoThumbnailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DYVideoThumbnailModel.h; sourceTree = "<group>"; };
+		9E74ABC724EA6A7500F015A4 /* DYVideoThumbnailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DYVideoThumbnailModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,8 +512,9 @@
 		9E4C7D1624E249740051EAD8 /* OneCity */ = {
 			isa = PBXGroup;
 			children = (
-				9E4C7D1824E249740051EAD8 /* DYOneCityViewController.h */,
-				9E4C7D1724E249740051EAD8 /* DYOneCityViewController.m */,
+				9E74ABC224EA561600F015A4 /* Model */,
+				9E74ABAD24EA4B8700F015A4 /* View */,
+				9E74ABAC24EA4B7500F015A4 /* Controller */,
 			);
 			path = OneCity;
 			sourceTree = "<group>";
@@ -526,6 +536,35 @@
 				9E4C7D2624E249740051EAD8 /* DYMainTabBarController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		9E74ABAC24EA4B7500F015A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9E4C7D1824E249740051EAD8 /* DYOneCityViewController.h */,
+				9E4C7D1724E249740051EAD8 /* DYOneCityViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9E74ABAD24EA4B8700F015A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E74ABBF24EA560800F015A4 /* DYVideoThumbnailCell.h */,
+				9E74ABC024EA560800F015A4 /* DYVideoThumbnailCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9E74ABC224EA561600F015A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E74ABC324EA564800F015A4 /* DYVideoThumbnailLayout.h */,
+				9E74ABC424EA564800F015A4 /* DYVideoThumbnailLayout.m */,
+				9E74ABC624EA6A7500F015A4 /* DYVideoThumbnailModel.h */,
+				9E74ABC724EA6A7500F015A4 /* DYVideoThumbnailModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,12 +668,14 @@
 				9E4C7D3324E249740051EAD8 /* DYSegmentView.m in Sources */,
 				9E4C7D3E24E249740051EAD8 /* NSObject+YYModel.m in Sources */,
 				9E4C7D4C24E249740051EAD8 /* UIColor+Util.m in Sources */,
+				9E74ABC824EA6A7500F015A4 /* DYVideoThumbnailModel.m in Sources */,
 				9E4C7D2F24E249740051EAD8 /* YYKVStorage.m in Sources */,
 				9E4C7D4B24E249740051EAD8 /* NSString+Util.m in Sources */,
 				9E4C7CA824E248D50051EAD8 /* main.m in Sources */,
 				9E4C7D4E24E249740051EAD8 /* DYMsgViewController.m in Sources */,
 				9E4C7D4D24E249740051EAD8 /* UIButton+Util.m in Sources */,
 				9E4C7D4524E249740051EAD8 /* DYDatePickerView.m in Sources */,
+				9E74ABC524EA564800F015A4 /* DYVideoThumbnailLayout.m in Sources */,
 				9E4C7D4124E249740051EAD8 /* DYBaseView.m in Sources */,
 				9E4C7D3424E249740051EAD8 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				9E4C7D4224E249740051EAD8 /* DYAddressPickerView.m in Sources */,
@@ -648,6 +689,7 @@
 				9E4C7D2824E249740051EAD8 /* DYHomeViewController.m in Sources */,
 				9E4C7D5624E249740051EAD8 /* DYMainTabBarController.m in Sources */,
 				9E4C7D2A24E249740051EAD8 /* DYVideoModel.m in Sources */,
+				9E74ABC124EA560800F015A4 /* DYVideoThumbnailCell.m in Sources */,
 				9E4C7D4024E249740051EAD8 /* DYUnaffiliatedDataPickerView.m in Sources */,
 				9E4C7D3F24E249740051EAD8 /* YYClassInfo.m in Sources */,
 				9E4C7D4824E249740051EAD8 /* UIView+Util.m in Sources */,

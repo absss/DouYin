@@ -70,14 +70,15 @@
     if ([self.delegate respondsToSelector:@selector(tabbar:shouldSelectItemAtIndex:)]) {
         shouldSelect = [self.delegate tabbar:self shouldSelectItemAtIndex:sender.tag - 100];
     }
-    if (1) {
+    if (shouldSelect) {
         UIButton *preSelectedBtn =  [self viewWithTag:self.selecdedIdx+100];
         preSelectedBtn.selected = NO;
         sender.selected = YES;
+        self.selecdedIdx = (int)(sender.tag - 100);
+        if ([self.delegate respondsToSelector:@selector(tabbar:didSelectItemAtIndex:)]) {
+            [self.delegate tabbar:self didSelectItemAtIndex:sender.tag - 100];
+        }
     }
-    self.selecdedIdx = (int)(sender.tag - 100);
-    if ([self.delegate respondsToSelector:@selector(tabbar:didSelectItemAtIndex:)]) {
-        [self.delegate tabbar:self didSelectItemAtIndex:sender.tag - 100];
-    }
+    
 }
 @end

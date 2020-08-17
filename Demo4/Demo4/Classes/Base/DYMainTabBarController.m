@@ -54,6 +54,7 @@
 - (BOOL)tabbar:(DYTabBar *)tabbar shouldSelectItemAtIndex:(NSInteger)index {
     if (index == 2) {
         DYVideoRecordViewController *vc = [DYVideoRecordViewController new];
+        vc.modalPresentationStyle = UIModalPresentationFullScreen;
         [self presentViewController:vc animated:YES completion:nil];
         return NO;
     }

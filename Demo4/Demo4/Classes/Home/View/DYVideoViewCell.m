@@ -28,16 +28,15 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self.contentView addSubview:self.videoView];
         self.contentView.backgroundColor = DYColor.blackColor0;
-        [self.videoView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.contentView);
-        }];
+        
     }
     return self;
 }
 
 - (void)setData:(DYVideoModel *)data {
     _data = data;
-    _videoView.data = data;
+    _videoView.videoURL = data.videoUrl;
+    _videoView.frame = CGRectMake(0, 0, data.videoViewSize.width, data.videoViewSize.height);
     
 }
 

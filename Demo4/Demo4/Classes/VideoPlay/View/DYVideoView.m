@@ -18,20 +18,17 @@
 @end
 @implementation DYVideoView
 
-- (instancetype)init
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
     if (self) {
         [self setup];
     }
     return self;
 }
 
-
 #pragma mark private method
 - (void)setup {
-    self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
-    self.playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
     [self.layer addSublayer:self.playerLayer];
     [self addSubview:self.playIconView];
     AVAudioSession *session = [AVAudioSession sharedInstance];
@@ -64,8 +61,9 @@
 }
 
 - (void)longPress {
+    
     if ([self.delegate respondsToSelector:@selector(videoView:didLongPress:)]) {
-        [self.delegate videoView:self didLongPress:self.data];
+        [self.delegate videoView:self didLongPress:self.videoURL];
     }
 }
 
@@ -129,7 +127,7 @@
     if (playing) {
         BOOL shouldPlay = YES;
         if ([self.delegate respondsToSelector:@selector(videoView:shouldStartPlayVideo:)]) {
-            shouldPlay = [self.delegate videoView:self shouldStartPlayVideo:self.data];
+            shouldPlay = [self.delegate videoView:self shouldStartPlayVideo:self.videoURL];
         }
         if (shouldPlay) {
             _playing = playing;
@@ -140,13 +138,13 @@
                           self.playIconView.alpha = 0;
                       } completion:^(BOOL finished) {
                           if (finished && [self.delegate respondsToSelector:@selector(videoView:didStartPlayVideo:)]) {
-                              [self.delegate videoView:self didStartPlayVideo:self.data];
+                              [self.delegate videoView:self didStartPlayVideo:self.videoURL];
                           }
                       }];
             } else {
                 self.playIconView.alpha = 0;
                 if ([self.delegate respondsToSelector:@selector(videoView:didStartPlayVideo:)]) {
-                    [self.delegate videoView:self didStartPlayVideo:self.data];
+                    [self.delegate videoView:self didStartPlayVideo:self.videoURL];
                 }
             }
         }
@@ -154,7 +152,7 @@
     } else {
         BOOL shouldPause = YES;
         if ([self.delegate respondsToSelector:@selector(videoView:shouldPauseVideo:)]) {
-            shouldPause = [self.delegate videoView:self shouldPauseVideo:self.data];
+            shouldPause = [self.delegate videoView:self shouldPauseVideo:self.videoURL];
         }
         if (shouldPause) {
             _playing = playing;
@@ -167,13 +165,13 @@
                     self.playIconView.alpha = kPauseIconAlpha;
                 } completion:^(BOOL finished) {
                     if (finished && [self.delegate respondsToSelector:@selector(videoView:didPauseVideo:)]) {
-                        [self.delegate videoView:self didPauseVideo:self.data];
+                        [self.delegate videoView:self didPauseVideo:self.videoURL];
                     }
                 }];
             } else {
                 self.playIconView.alpha = kPauseIconAlpha;
                 if ([self.delegate respondsToSelector:@selector(videoView:didPauseVideo:)]) {
-                    [self.delegate videoView:self didPauseVideo:self.data];
+                    [self.delegate videoView:self didPauseVideo:self.videoURL];
                 }
             }
             
@@ -182,23 +180,31 @@
 }
 
 
-#pragma mark  - setter
-- (void)setData:(DYVideoModel *)data {
-    _data = data;
-    CGFloat width = data.videoViewSize.width;
-    CGFloat height = data.videoViewSize.height;
-    if (CGRectEqualToRect(_playerLayer.frame, CGRectZero)) {
-        _playerLayer.frame = CGRectMake(0, 0, width, height);
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    if (CGRectEqualToRect(frame, CGRectZero)) {
+        return;
     }
-    if (CGPointEqualToPoint(_playIconView.frame.origin, CGPointZero)) {
-        _playIconView.frame = CGRectMake(width/2 - kPauseIconWH/2, height/2 - kPauseIconWH/2, kPauseIconWH, kPauseIconWH);
-    }
-    AVPlayerItem *item = [AVPlayerItem playerItemWithURL:data.videoUrl];
+    CGFloat width = CGRectGetWidth(frame);
+    CGFloat height = CGRectGetHeight(frame);
+    self.playIconView.frame = CGRectMake(width/2 - kPauseIconWH/2, height/2 - kPauseIconWH/2, kPauseIconWH, kPauseIconWH);
+    self.playerLayer.frame = CGRectMake(0, 0, width, height);
+}
+
+- (void)setVideoURL:(NSURL *)videoURL {
+    _videoURL = videoURL;
+    AVPlayerItem *item = [AVPlayerItem playerItemWithURL:videoURL];
     [self.player replaceCurrentItemWithPlayerItem:item];
 }
 
 #pragma mark - getter
-
+- (AVPlayerLayer *)playerLayer {
+    if (!_playerLayer) {
+        _playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
+        _playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    }
+    return _playerLayer;;
+}
 
 - (AVPlayer *)player {
     if (!_player) {
