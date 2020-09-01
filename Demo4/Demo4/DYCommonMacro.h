@@ -38,6 +38,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 
 #define DYWeakSelf  __weak typeof(self) weakSelf = self;
+#define DYStrongSelf __strong typeof(weakSelf) strongSelf = weakSelf;
 // view getter
 #define UIViewGetter(NAME,BACKGROUNDCOLOR) \
 - (UIView *)NAME {\
